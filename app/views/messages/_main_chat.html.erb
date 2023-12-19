@@ -7,29 +7,8 @@
   </div>
 </div>
 
-<div class="message">
-  <div class="message-header">
-    <div class="message-user-name">
-      Tom
-    </div>
-    <div class="message-time">
-      2021/05/10 11:59:11
-    </div>
-  </div>
-  <div class="message-text">
-    おはよう
-  </div>
-  <div class="message-header">
-    <div class="message-user-name">
-      Tom
-    </div>
-    <div class="message-time">
-      2021/05/10 11:59:16
-    </div>
-  </div>
-  <div class="message-text">
-    こんばんは
-  </div>
+<div class="messages">
+  <%= render partial: "message", collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: "footer", local: true do |f| %>
